@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Customer Login
+	</title>
+	<script src="C:\Users\Isha\Desktop\D\jquery-3.5.1.min.js"></script>
+	
+</head>
+	<style type="text/css">
+		body{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height:100vh;
+			background-color: navy;
+		}
+		form{
+			padding: 40px;
+			border-radius: 5px;
+			background-color: white;
+		}
+		
+		input[type="textbox"],
+      input[type="password"]
+	  {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 5px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        resize: none;
+      }
+		.title{
+			font-family: Cambria;
+			font-weight: bold;
+			font-size: 30px;
+			color: black;
+			align-items: center;
+		}
+		.group{
+			font-weight: bold;
+			font-family: Cambria;
+		}
+		button{
+			width: 105%;
+        padding: 7px;
+		background-color: navy;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+		font-family: Cambria;
+			font-weight: bold;
+			font-size: 15px;
+			color: white;
+			align-items: center;
+		}
+	</style>
+<body>
+	<form id="LOGIN">
+		<div class="title"> ACCOUNT LOGIN </div> <br>
+		<hr>
+	<div class="group">	
+	
+		<label for="Name"> E-Mail: </label> </div>
+		<input type="textbox" name="name" placeholder="Enter Your Mail Id" id="mail"><br>
+
+		<label for="Password"> Password: </label></div>
+		<input type="password" name="name" placeholder="Enter Your Password" id="pass">
+
+		<button id="sub"> LOGIN HERE </button>
+		<p> Don't Have Account?? </p>
+		<a href="register.html"> Register </a>
+	</div>
+	</form>
+
+	<script>
+		$(document).ready(function(){
+			$("#sub").click(function(){
+				var name = $("#mail").val();
+				var password = $("#pass").val();
+				if(name === "disha" && password==="12345"){
+					alert("Hi");
+					$("form").attr('action','disha.html')
+				}
+				else{
+					alert("Plaese Enter Your Details!!");
+				}
+			});
+		});
+	</script>
+</body>
+</html>
